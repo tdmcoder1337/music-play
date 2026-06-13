@@ -401,6 +401,13 @@
 .player.minimized #repeatBtn {
   display: none;
 }
+.close-mini-btn{
+  display:none;
+}
+
+.player.minimized .close-mini-btn{
+  display:block;
+}
 
 .player.minimized .controls {
   justify-content: flex-end;
@@ -468,7 +475,7 @@
 
   <div class="player hidden" id="player">
     <button id="closeMiniBtn" class="close-mini-btn">✕</button>
-  
+  <button id="minimizeBtn" class="minimize-btn">←</button>
     <button id="closeMiniBtn" class="close-mini-btn">✕</button>
     <p class="now-playing-label">Hozir ijro etilmoqda</p>
     <div class="player-art" id="playerArt">
