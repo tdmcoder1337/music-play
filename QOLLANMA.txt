@@ -1,0 +1,59 @@
+====================================
+  MUSIQA PLAYER - O'RNATISH YO'RIQNOMASI
+====================================
+
+BU ILOVANI TELEFONGA O'RNATISH UCHUN:
+
+USUL 1 - GitHub Pages (TAVSIYA ETILADI, BEPUL):
+------------------------------------------------
+1. github.com da bepul hisob oching
+2. Yangi repository yarating (masalan: "musiqa-player")
+3. Barcha 5 ta faylni yuklang:
+   - index.html
+   - sw.js
+   - manifest.json
+   - icon-192.png
+   - icon-512.png
+4. Settings > Pages > main branch dan Deploy qiling
+5. Sizga link beriladi: https://username.github.io/musiqa-player/
+6. Telefon brauzerida (Chrome/Edge) o'sha linkni oching
+7. "Ekranga qo'shish" / "Add to Home Screen" tugmasini bosing
+8. Tayyor! Ilova telefon ekranida paydo bo'ladi.
+
+USUL 2 - Netlify Drop (ENG OSON):
+----------------------------------
+1. netlify.com/drop ga kiring
+2. Bu papkani sudrab tashlang
+3. Darhol link olasiz - uni telefoningizda oching
+4. "Ekranga qo'shish" bosing
+
+USUL 3 - Lokal test (WIFI orqali):
+------------------------------------
+1. Kompyuterda "python3 -m http.server 8080" yoki
+   "npx serve ." buyrug'ini ishga tushiring
+2. Kompyuterning IP manzilini toping (masalan: 192.168.1.5)
+3. Telefon brauzerida: http://192.168.1.5:8080 ga kiring
+4. "Ekranga qo'shish" bosing
+
+ESLATMA - APK HAQIDA:
+----------------------
+PWA ilovalar APK emas. Android APK faqat Android Studio
+orqali yoki Bubblewrap/TWA texnologiyasi bilan yaratiladi.
+Ammo PWA ham xuddi ilova kabi ishlaydi:
+✓ Oflayn ishlaydi
+✓ Ekranda ilova sifatida ko'rinadi
+✓ Splashscreen bor
+✓ Brauzer interfeysi ko'rinmaydi
+
+ILOVADA NIMA BOR:
+-----------------
+✓ MP3, WAV, AAC, OGG formatlarini qo'llab-quvvatlaydi
+✓ Fayllar telefon xotirasida saqlanadi (IndexedDB)
+✓ Oflayn ishlaydi
+✓ Qidirish funksiyasi
+✓ Tasodifiy tartib (Shuffle)
+✓ Takrorlash (Repeat)
+✓ Ovoz balandligi boshqaruvi
+✓ Telefon progress bar dan boshqarish
+✓ Qo'shiqni o'chirish imkoniyati
+====================================
