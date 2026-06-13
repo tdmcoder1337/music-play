@@ -378,6 +378,16 @@
   border-radius: 18px;
   z-index: 1000;
 }
+.close-mini-btn{
+  position:absolute;
+  top:10px;
+  right:10px;
+  background:none;
+  border:none;
+  color:var(--text);
+  font-size:18px;
+  cursor:pointer;
+}
 
 .player.minimized .now-playing-label,
 .player.minimized .player-art,
@@ -457,7 +467,9 @@
   </div>
 
   <div class="player hidden" id="player">
+    <button id="closeMiniBtn" class="close-mini-btn">✕</button>
   <button id="minimizeBtn" class="minimize-btn">←</button>
+    <button id="closeMiniBtn" class="close-mini-btn">✕</button>
     <p class="now-playing-label">Hozir ijro etilmoqda</p>
     <div class="player-art" id="playerArt">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -543,6 +555,7 @@ const shuffleBtn = document.getElementById('shuffleBtn');
 const repeatBtn = document.getElementById('repeatBtn');
 const uploadZone = document.getElementById('uploadZone');
 const minimizeBtn = document.getElementById('minimizeBtn');
+const closeMiniBtn = document.getElementById('closeMiniBtn');
 
 let tracks = [];
 let currentIndex = -1;
@@ -554,6 +567,24 @@ let objectURLs = {};
 // Load tracks from IndexedDB on start
 const DB_NAME = 'muzika_db', DB_VERSION = 1, STORE = 'tracks';
 let db;
+
+
+closeMiniBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+
+  audio.pause();
+  audio.currentTime = 0;
+
+  isPlaying = false;
+  currentIndex = -1;
+
+  player.classList.add('hidden');
+  player.classList.remove('minimized');
+
+  updatePlayBtn();
+  updatePlayerUI();
+  renderTracks(searchInput.value);
+});
 
 function openDB() {
   return new Promise((res, rej) => {
